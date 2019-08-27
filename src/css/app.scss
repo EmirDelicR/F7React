@@ -1,0 +1,74 @@
+/* Your app custom styles here */
+
+.Achievements {
+  background-color: beige;
+
+  & .achievement-badge {
+    padding: 0.5rem;
+    color: aqua;
+    & p {
+      text-align: center;
+      font-size: 2rem;
+      margin: 0.1rem;
+    }
+  }
+
+  .achievement-header {
+    .block {
+      margin-top: 0px;
+    }
+    & .left-segment {
+      padding-top: 1.4rem;
+      & .top {
+        height: 5.5rem;
+      }
+
+      & h4,
+      p {
+        margin: 2px;
+      }
+    }
+  }
+
+  .achievement-count {
+    & h5 {
+      margin: 0rem 1rem;
+    }
+    .badges-container {
+      display: flex;
+    }
+  }
+
+  .achievement-emblems {
+    background-color: aqua;
+    color: white;
+    & h5 {
+      margin: 0rem 1rem;
+      padding-top: 0.7rem;
+    }
+    .emblem-container {
+      display: flex;
+    }
+  }
+
+  .achievement-statistic {
+    & h5 {
+      margin: 0rem 1rem;
+      padding-top: 0.7rem;
+    }
+    .statistic-container {
+      display: flex;
+      .stat-container {
+        & p {
+          margin: 2px;
+        }
+      }
+    }
+  }
+}
+
+.Avatar {
+  height: 5.5rem;
+  min-width: 5rem;
+  border: 1px solid red;
+}
