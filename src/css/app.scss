@@ -1,28 +1,56 @@
 /* Your app custom styles here */
 
 .Achievements {
-  background-color: beige;
-
-  & .achievement-badge {
-    padding: 0.5rem;
-    color: aqua;
-    & p {
-      text-align: center;
-      font-size: 2rem;
-      margin: 0.1rem;
-    }
-  }
-
   .achievement-header {
     .block {
       margin-top: 0px;
+      & h1 {
+        color: black;
+      }
     }
+
     & .left-segment {
-      padding-top: 1.4rem;
-      & .top {
-        height: 5.5rem;
+      display: flex;
+      flex-flow: column nowrap;
+      padding-top: 1.6em;
+
+      .archivement-user-meta {
+        display: flex;
+        flex-flow: row nowrap;
+
+        > div {
+          flex: 1;
+        }
+
+        .archivement-user-meta-actions {
+          display: flex;
+          flex-flow: row nowrap;
+          justify-content: flex-end;
+
+          i {
+            color: #8c8b94;
+            padding: 3px;
+          }
+        }
       }
 
+      .top {
+        height: 5.5em;
+      }
+
+      .bottom {
+        padding-top: 1.1em;
+
+        h4 {
+          color: black;
+          font-weight: normal;
+          font-size: 1rem;
+        }
+        p {
+          color: #808080;
+          font-style: italic;
+        }
+      }
       & h4,
       p {
         margin: 2px;
@@ -30,45 +58,217 @@
     }
   }
 
+  & .achievement-badge {
+    flex: 1;
+    padding: 0.5em;
+    color: #1f8e93;
+
+    > div {
+      text-align: center;
+
+      &:first-child {
+        font-size: 2em;
+      }
+
+      &:last-child {
+        font-size: 0.8rem;
+      }
+    }
+  }
+
   .achievement-count {
     & h5 {
-      margin: 0rem 1rem;
+      margin: 0rem 0.8em;
+      color: #3d3b4b;
     }
     .badges-container {
       display: flex;
+      overflow-x: hidden;
     }
   }
 
   .achievement-emblems {
-    background-color: aqua;
+    height: 10em;
     color: white;
-    & h5 {
-      margin: 0rem 1rem;
-      padding-top: 0.7rem;
+    background-color: #1f8e93;
+    margin-bottom: 2em;
+
+    & h4 {
+      margin: 0em 0.7em;
+      padding: 0.7em 0 0.4em 0;
     }
     .emblem-container {
       display: flex;
+      padding: 0 0.8em;
+
+      > div {
+        flex: 1;
+      }
+
+      & .achievement-emblem {
+        height: 5.5em;
+        min-width: 5em;
+
+        .achievement-emblem-inner {
+          background-color: #fff;
+          border: 2px solid #67bcd1;
+          margin-right: 5px;
+        }
+
+        & img {
+          max-width: 100%;
+          max-height: 100%;
+        }
+      }
+    }
+  }
+
+  .emblem-view-more {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+    padding: 5px;
+
+    i {
+      border: 1px solid white;
+      border-radius: 100%;
+    }
+
+    > div:last-child {
+      font-size: 0.75rem;
+      margin-top: 5px;
     }
   }
 
   .achievement-statistic {
     & h5 {
-      margin: 0rem 1rem;
-      padding-top: 0.7rem;
+      margin: 0rem 0.8em;
     }
     .statistic-container {
       display: flex;
+      border: 1px solid transparent;
+      border-top-color: #bac8c4;
+      margin: 0.5em;
+      padding: 1em 0;
+      color: #1f8e93;
+
       .stat-container {
+        width: 6.5em;
+        height: 6.5em;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        background: #b2d1d5;
+        border-radius: 100%;
+        text-align: center;
+        padding: 0.5em;
+        font-size: 1em;
+
         & p {
-          margin: 2px;
+          margin: 0;
+          font-size: 2em;
+        }
+        & p:first-child {
+          color: white;
+          font-size: 1em;
+        }
+
+        > span {
+          font-size: 0.8rem;
+          line-height: 1;
+          margin-bottom: 4px;
         }
       }
     }
   }
+
+  .line-graph-container {
+    position: relative;
+    height: 8em;
+    width: 17em;
+  }
 }
 
 .Avatar {
-  height: 5.5rem;
-  min-width: 5rem;
-  border: 1px solid red;
+  height: 5.5em;
+  min-width: 5em;
+
+  & img {
+    border: 1px solid #999999;
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
+.Activities {
+  .segment-two-control {
+    display: flex;
+    justify-content: center;
+
+    button {
+      width: 16%;
+      margin-left: 0.8em;
+      background-color: #5cd39c;
+      color: white;
+      border: none;
+    }
+    .active {
+      background-color: #1f8e93;
+    }
+  }
+
+  .segment-three-container {
+    margin-top: 3rem;
+    border: 1px solid #9fdaeb;
+
+    h2,
+    h4 {
+      padding-left: 0.4rem;
+    }
+
+    h2 {
+      margin-bottom: 0;
+    }
+
+    h4 {
+      margin-top: 0;
+    }
+
+    .graph-segment {
+      display: flex;
+
+      p {
+        color: #707070;
+      }
+
+      .stacked-graph-container {
+        height: 15rem;
+        width: 10rem;
+        margin: 0;
+
+        canvas {
+          width: 13rem !important;
+          margin-left: -2rem;
+        }
+      }
+    }
+  }
+  .info-container {
+    border: 1px solid #9fdaeb;
+    padding: 1rem;
+    p {
+      padding: 0;
+      margin: 0;
+    }
+    .fab {
+      margin-bottom: calc(var(--f7-fab-margin) - 3.5rem);
+      margin-right: calc(var(--f7-fab-margin) + 0.5rem);
+    }
+  }
+}
+
+.text-right {
+  text-align: right;
 }

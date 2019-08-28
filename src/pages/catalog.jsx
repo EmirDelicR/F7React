@@ -18,17 +18,17 @@ export default function Example() {
   return (
     <Page name="achievements" className="Achievements">
       <Navbar title="Achievements">
-        <NavRight>
+        {/* <NavRight>
           <Link
             iconIos="f7:menu"
             iconAurora="f7:menu"
             iconMd="material:menu"
             panelOpen="right"
           />
-        </NavRight>
+        </NavRight> */}
       </Navbar>
       {/* Right panel with reveal effect*/}
-      <Panel right reveal themeDark>
+      {/* <Panel right reveal themeDark>
         <View>
           <Page>
             <Navbar title="Right Panel" />
@@ -36,6 +36,7 @@ export default function Example() {
           </Page>
         </View>
       </Panel>
+      */}
       {/* Content */}
       <AchievementHeader />
       <BadgeCount />

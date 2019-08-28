@@ -1,17 +1,23 @@
 import React from "react";
 import Emblem from "./emblem";
 import { Button, Icon } from "framework7-react";
+import user from "../../../static/me.png";
+
 export default function BadgesEmblem() {
   return (
     <div className="achievement-emblems">
-      <h5>AKTUELLE BADGES</h5>
+      <h4>AKTUELLE BADGES</h4>
       <div className="emblem-container">
-        <Emblem emblem="/img.png" />
-        <Emblem emblem="/img.png" />
-        <Emblem emblem="/img.png" />
-        <Button>
-          <Icon f7="home" size="14px" color="blue"></Icon>
-        </Button>
+        <Emblem emblem={user} />
+        <Emblem emblem={user} />
+        <Emblem emblem={user} />
+
+        <div className="emblem-view-more">
+          <div>
+            <Icon f7="menu" size="36px" color="white"></Icon>
+          </div>
+          <div>ALLE ANSEHEN</div>
+        </div>
       </div>
     </div>
   );
