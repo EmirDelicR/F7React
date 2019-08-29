@@ -45,19 +45,3 @@ export default function Example() {
     </Page>
   );
 }
-/*
-export default class extends React.Component {
-  constructor() {
-    super();
-
-    this.state = {
-      products: this.$f7.data.products
-    };
-  }
-  render() {
-    return (
-
-    );
-  }
-}
-*/

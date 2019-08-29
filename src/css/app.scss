@@ -99,20 +99,22 @@
     }
     .emblem-container {
       display: flex;
-      padding: 0 0.8em;
+      padding: 0 0.7rem;
 
       > div {
         flex: 1;
       }
 
       & .achievement-emblem {
-        height: 5.5em;
-        min-width: 5em;
+        height: 5.2rem;
+        min-width: 5rem;
 
         .achievement-emblem-inner {
           background-color: #fff;
           border: 2px solid #67bcd1;
-          margin-right: 5px;
+          margin-right: 1rem;
+          height: 5.2rem;
+          min-width: 4.7rem;
         }
 
         & img {
@@ -136,7 +138,7 @@
     }
 
     > div:last-child {
-      font-size: 0.75rem;
+      font-size: 0.7rem;
       margin-top: 5px;
     }
   }
@@ -255,6 +257,7 @@
       }
     }
   }
+
   .info-container {
     border: 1px solid #9fdaeb;
     padding: 1rem;
@@ -263,8 +266,77 @@
       margin: 0;
     }
     .fab {
-      margin-bottom: calc(var(--f7-fab-margin) - 3.5rem);
+      margin-bottom: calc(var(--f7-fab-margin) - 3.5rem) !important;
       margin-right: calc(var(--f7-fab-margin) + 0.5rem);
+    }
+  }
+
+  .progress-container {
+    background-color: #d9e8ea;
+    margin-bottom: 3rem;
+
+    h4 {
+      color: #707070;
+      margin-left: 0.5rem;
+      padding-top: 1rem;
+    }
+
+    .status {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 0.5rem;
+      font-style: italic;
+    }
+
+    .progress-bar-wrap {
+      margin: 1rem 0;
+
+      .progress-bar {
+        background-color: #b2d1d5;
+        height: 2.2rem;
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+      }
+
+      .progress {
+        position: relative;
+        background: #1f8e93;
+        height: 2.2rem;
+        width: 100%;
+        transition: width 0.5s ease-in;
+
+        &:before {
+          content: "";
+          position: absolute;
+          right: 0;
+          border-bottom: 2.2rem solid #b2d1d5;
+          border-left: 2.2rem solid #1f8e93;
+        }
+      }
+    }
+
+    .favorite {
+      display: flex;
+      overflow-x: hidden;
+
+      .favorite-container {
+        flex: 1;
+        padding: 0.5em;
+        color: #5b5a61;
+
+        > div {
+          text-align: center;
+
+          &:first-child {
+            font-size: 2em;
+          }
+
+          &:last-child {
+            font-size: 0.8rem;
+          }
+        }
+      }
     }
   }
 }

@@ -1,7 +1,7 @@
 /** LINE GRAPH */
 const lineGraphOptions = {
   legend: { display: false },
-
+  responsive: true,
   tooltips: {
     callbacks: {
       label: function(tooltipItem) {
@@ -77,7 +77,8 @@ const barGraphOptions = {
           stepSize: 3,
           min: 0,
           max: 12,
-          fontColor: "black"
+          fontColor: "black",
+          callback: val => (![0, 9].includes(val) ? val + " h" : "")
         },
         gridLines: {
           display: false,
