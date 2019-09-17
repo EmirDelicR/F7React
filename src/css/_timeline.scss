@@ -1,10 +1,4 @@
 .Timeline {
-  .searchbar {
-    top: 0px !important;
-  }
-}
-
-.Timeline {
   .start {
     height: 80px;
 
@@ -53,7 +47,7 @@
   }
 
   .timeline-item {
-    &:nth-of-type(3n) {
+    &:nth-of-type(odd) {
       .timeline-item-content {
         .item {
           justify-content: flex-end;
@@ -84,8 +78,10 @@
           margin-left: 6px;
         }
 
-        .image-wrap {
+        .badge {
           border: 1px solid #1f8e93;
+          height: 100%;
+          border-radius: 0px;
           img {
             width: 100%;
             height: 100%;

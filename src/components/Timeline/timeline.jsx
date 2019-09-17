@@ -1,6 +1,7 @@
 import React from "react";
 import badge from "../../static/badge.png";
 import { Icon } from "framework7-react";
+import Badge from "../Badge/badge";
 
 export default function TimelineComponent() {
   const elements = [
@@ -66,9 +67,7 @@ export default function TimelineComponent() {
               <div className="timeline-item-content">
                 <div className="item">
                   <div className="column">
-                    <div className="image-wrap">
-                      <img src={item.img} alt="User avatar" />
-                    </div>
+                    <Badge src={item.img} />
                   </div>
                   <div className="column">
                     <div>

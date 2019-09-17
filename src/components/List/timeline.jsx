@@ -29,10 +29,14 @@ export default class extends React.Component {
       )
         found.push(i);
     }
-    return found; // return array with mathced indexes
+    return found;
   }
   renderExternal(vl, vlData) {
     this.setState({ vlData });
+  }
+
+  componentWillUpdate() {
+    console.log(this);
   }
   render() {
     return (
@@ -64,7 +68,6 @@ export default class extends React.Component {
               <ListItem
                 key={index}
                 mediaItem
-                link="#"
                 title={item.title}
                 subtitle={item.subtitle}
                 style={{ top: `${this.state.vlData.topPosition}px` }}

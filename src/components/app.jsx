@@ -90,6 +90,14 @@ export default class extends React.Component {
               text="Home"
             />
             <Link
+              tabLink="#view-timeline"
+              tabLinkActive
+              iconIos="f7:home_fil"
+              iconAurora="f7:home_fil"
+              iconMd="material:home"
+              text="Time"
+            />
+            <Link
               tabLink="#view-catalog"
               iconIos="f7:list_fill"
               iconAurora="f7:list_fill"
@@ -107,7 +115,7 @@ export default class extends React.Component {
 
           {/* Your main view/tab, should have "view-main" class. It also has "tabActive" prop */}
           <View id="view-home" main tab tabActive url="/" />
-
+          <View id="view-timeline" main tab url="/timeline/" />
           {/* Catalog View */}
           <View id="view-catalog" name="catalog" tab url="/catalog/" />
 
