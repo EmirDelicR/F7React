@@ -45,7 +45,6 @@ export default function TimelineComponent() {
 
   return (
     <div className="Timeline">
-      {/* <img src={user} alt="User avatar" /> */}
       <div className="timeline">
         <div className="timeline-item start">
           <div className="timeline-item-divider">FFOÖ</div>
@@ -65,17 +64,15 @@ export default function TimelineComponent() {
                 <Icon className="timeline-icon" f7="share" size="24px"></Icon>
               </div>
               <div className="timeline-item-content">
-                <div className="item">
-                  <div className="column">
+                <div className="timeline-item-wrapper">
+                  {/*   <div className="timeline-item-spacer"></div> */}
+                  <div className="timeline-item-badge">
                     <Badge src={item.img} />
                   </div>
-                  <div className="column">
-                    <div>
-                      <div>
-                        <b>{item.name}</b>
-                      </div>
-                      <p>{item.info}</p>
-                    </div>
+                  <div className="timeline-item-name">
+                    <b>{item.name}</b>
+                    <br />
+                    {item.info}
                   </div>
                 </div>
               </div>
