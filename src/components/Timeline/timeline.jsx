@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import badge from "../../static/badge.png";
 import { Icon } from "framework7-react";
 import Badge from "../Badge/badge";
 
+import F7Context from "../../context/f7Context";
+
 export default function TimelineComponent() {
+  const f7 = useContext(F7Context);
+  console.log("This is F7: ", f7);
+
   const elements = [
     {
       year: 2019,
