@@ -2,6 +2,17 @@
 
 @import "timeline";
 @import "list";
+
+/* Remove tab activation in full app */
+.md .tabbar .tab-link-highlight,
+.md .tabbar-labels .tab-link-highlight {
+  display: none;
+}
+
+.link-active {
+  color: red !important;
+}
+
 .Achievements {
   .achievement-header {
     .block {

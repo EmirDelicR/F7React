@@ -24,6 +24,7 @@ import {
 import routes from "../js/routes";
 
 import { F7Provider } from "../context/f7Context";
+import ToolbarComponent from "../components/Panels/toolbar";
 
 export default class extends React.Component {
   constructor() {
@@ -85,46 +86,10 @@ export default class extends React.Component {
           <Views tabs className="safe-areas">
             {/* Tabbar for switching views-tabs */}
             <Toolbar tabbar labels bottom>
-              <Link
-                tabLink="#view-home"
-                tabLinkActive
-                iconIos="f7:home_fil"
-                iconAurora="f7:home_fil"
-                iconMd="material:home"
-                text="Home"
-              />
-              <Link
-                tabLink="#view-timeline"
-                tabLinkActive
-                iconIos="f7:home_fil"
-                iconAurora="f7:home_fil"
-                iconMd="material:home"
-                text="Time"
-              />
-              <Link
-                tabLink="#view-catalog"
-                iconIos="f7:list_fill"
-                iconAurora="f7:list_fill"
-                iconMd="material:view_list"
-                text="Catalog"
-              />
-              <Link
-                tabLink="#view-settings"
-                iconIos="f7:settings_fill"
-                iconAurora="f7:settings_fill"
-                iconMd="material:settings"
-                text="Settings"
-              />
+              <ToolbarComponent />
             </Toolbar>
 
-            {/* Your main view/tab, should have "view-main" class. It also has "tabActive" prop */}
-            <View id="view-home" main tab tabActive url="/" />
-            <View id="view-timeline" main tab url="/timeline/" />
-            {/* Catalog View */}
-            <View id="view-catalog" name="catalog" tab url="/catalog/" />
-
-            {/* Settings View */}
-            <View id="view-settings" name="settings" tab url="/settings/" />
+            <View main tabActive url="/" className="safe-areas" />
           </Views>
 
           {/* Popup */}

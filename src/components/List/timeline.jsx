@@ -36,7 +36,7 @@ export default class extends React.Component {
   }
 
   componentWillUpdate() {
-    console.log(this);
+    // console.log(this);
   }
   render() {
     return (
